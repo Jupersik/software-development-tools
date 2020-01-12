@@ -19,25 +19,25 @@ describe("sort function", () => {
         expect(lib.sort("one two three four five six")).toBe("three four five one two six")
     })
 
-    test("strip empty string", () => { 
+    test("sort empty string", () => { 
         expect(lib.sort("")).toBe(""); 
     }) 
 
-    test("strip non string value", () => { 
+    test("sort non string value", () => { 
         expect(lib.sort(1)).toBe(""); 
     }) 
 })
 
 describe("reverse function", () => {
-    test("reverse non empty string \"I am master Yoda\"", () => {
+    test("reverse non sempty string \"I am master Yoda\"", () => {
         expect(lib.reverse("I am master Yoda")).toBe("Yoda master am I")
     })
 
-    test("strip empty string", () => { 
+    test("reverse empty string", () => { 
         expect(lib.reverse("")).toBe(""); 
     }) 
 
-    test("strip non string value", () => { 
+    test("reverse non string value", () => { 
         expect(lib.reverse(1)).toBe(""); 
     })
 })
