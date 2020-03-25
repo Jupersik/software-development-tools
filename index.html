@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Т3.2. Тестирование графического интерфейса</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="author" content="Новоселова Юлия" />
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded',
+            function () {
+                var input1 = document.getElementById('textBoxA');
+                var input2 = document.getElementById('textBoxB');
+                 
+                input1.addEventListener('input', 
+                    function (event) {
+                        input2.value = event.target.value;
+                    })
+            })
+        
+    </script>
+</head>
+
+<body>
+    <form method="GET">
+        <!-- текстове поле 1 -->
+        <label>
+            <input id="textBoxA" type="text " placeholder="текстовое поле 1" name="pole1" />
+        </label>
+
+        <!-- текстове поле 2 -> недоступно для редактирования, 
+        и его содержимое синхронизируется с содержимым текстовое поле 1 (readonly="readonly")-->
+        <label>
+            <input id="textBoxB" readonly="readonly" type="text" placeholder="текстовое поле 2" name="pole2" />
+        </label><br /><br />
+
+        <button id="send_out" type="submit">Отправить запрос</button>
+        <button id="clear" type="reset">Очистить форму</button>
+    </form>
+</body>
+
+</html>
